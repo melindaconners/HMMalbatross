@@ -26,9 +26,6 @@ Typically, the calibration of magnetometer data is done using calibration roll d
 - tag frame is untilted using the rotation matrix from 's3_neurologger_saveRotMat.m'
 - 75 Hz neurologger data is decimated to 25 Hz to match AGM sampling frequency
 
-#### 's4_AGM_prep4analysis.m' (MATLAB): final step for creating analysis-ready AGM files
-All columns checked and edited to conform with that of neurologger files
-
 #### 'w1_derive_sensor_metrics.m' (MATLAB): Additional 25 Hz metrics are derived from accelerometer and magnetometer data 
 - Euler angles: *pitch*, *roll*, *heading (yaw)*
 - Angular velocities: *AvEP*, *AvER*, *AvEY*, *AAV* (see Gunner et al 2020)
