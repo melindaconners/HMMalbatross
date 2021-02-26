@@ -54,7 +54,14 @@ All columns checked and edited to conform with that of neurologger files
 16.	Number of AvEY peaks (number of soaring arcs)
 
 #### 'x1_explore_feature_content.r' (R environment):
+Explore features to determine final set of features. Plots histograms and creates correlation matrix
 
 #### 'x2_run_HMM_optim.r' (R environment):
+Construct HMM for Model-1: 3 state model on 3 features ('hf', 'p5', 'sh')
+Par0 are optimized by identifying starting values resulting in best fit model from 25 iterations
+Species is included as a fixed effect on transition probabilities.
 
-#### 'z3_unpack_states_toFullSensorFiles.m' (MATLAB) and plot a subset of figures:
+#### 'z1_unpackHMMstate.m' (MATLAB): 
+This script "unpacks" 30-sec HMM-inferred states into full resolution
+sensor files. Objective is to plot raw sensor data with states, to
+inspect HMM-inferred behaviors as they relate to patterns in sensor data.
