@@ -1,7 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This script does the final preparation of Neurologger sensor datasets for analysis. 
 % Preparation is done in the following steps:
-% 1. Check column and unit conformity to that of Neurologgers
+% 1. Add an index column 
+% 2. Conform neurologger columns and units to AGM 
+% 3. Untilt the tag-frame (tilt caused by sensors on an angle within the tag)
+% 4. Decimate 75 Hz Neurologger to 25 Hz
+
 %
 % Code by M. Conners for Conners et al 2021:
 % "Hidden Markov models identify major movement modes in accelerometer and
