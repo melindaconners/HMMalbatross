@@ -16,13 +16,19 @@ This code loops through each bird deployment folder and appends all the files as
   - data from raw .bin files are decompressed and converted to relevant units.
   - data is organized into separate 75 Hz sensor data and 600 Hz ECG data frames.
   - sensor frames are aligned to each other and to the bird frame.
-  
+
 #### 's2_calibrate_magnetometer.m' (MATLAB): uses a data-driven, piece-wise method to calibrate triaxial magnetometer data from both tag types
 Typically, the calibration of magnetometer data is done using calibration roll data that is collected prior to each device's deployment that is then used to correct the magnetometer data of each deployment. However, this approach is potentially problematic for animals traveling over great distances as this method assumes the magnetic field insensity where the calibration rolls were collected will remain somewhat static along the full deployment. Since albatrosses fly vast distances across many degrees of latitude and longitude, the magnetic field can change substantially along the trip. To address this, we used a data-driven approach recommended in Mark Johnson's "Measuring the orientation and movement of marine animals using inertial and magnetic sensors - a tutorial" (https://synergy.st-andrews.ac.uk/soundtags/files/2013/01/animal_orientation_tutorial.pdf). This method requires triaxial data and animals that change orientation substantially throughout the deployment. In this script, triaxial magnetometer data from each bird deployment is divided into segments and each segment is calibrated separately using magnetometer data within that segment. Calibration diagnostics are run on each segment and if the calibrated data does not pass a diagnostic test, then the duration of the segments will be reduced to a shorter time interval (described in detail in Additional File 2). 
 
 #### 's3_neurologger_saveRotMat.m' (MATLAB): 
 creates a rotation matrix for each neurologger deployment to correct a slight tilt in the sensor frames relative to the bird frame inherent in these devices. 
 
+#### 's4_AGM_prep4analysis.m' (MATLAB):  final step for creating analysis-ready AGM files
+- Check for upside-down tag placements
+- Rotate M frame to match A frame and bird frame
+- Check time intervals and expand with NAs if necessary
+- Interpolate P and T
+  
 #### 's4_neurologger_prep4analysis.m' (MATLAB): final step for creating analysis-ready neurologger files
 - units are conformed to that of AGM
 - tag frame is untilted using the rotation matrix from 's3_neurologger_saveRotMat.m'
