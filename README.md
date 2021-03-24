@@ -10,9 +10,7 @@ For the following scripts to work, need to load functions and toolboxes into Mat
 ## Scripts: 
 
 #### 's1_import_AGM.m' (MATLAB): to import and pre-process sensor data from Technosmart AGM devices
-  - sensor frames are aligned to each other and the bird frame
-  - times are checked for irregularities in sampling rate (25 Hz), and if irregularities exist, the data frame is expanded with NAs to result in a dataframe with regular observations.
-  - temperature and pressure columns are interpolated from 1 Hz to 25 Hz
+This code loops through each bird deployment folder and appends all the files associated with that deployment. Then writes a single file for each deployment
 
 #### 's1_import_neurologger.m' (MATLAB): to import and pre-process sensor data from the Evolocus Neurologger devices
   - data from raw .bin files are decompressed and converted to relevant units.
