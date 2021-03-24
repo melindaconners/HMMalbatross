@@ -4,6 +4,9 @@ This repository stores the code and an example dataset used in Conners et al 202
 **This README and all files will be finalized and uploaded by Feb. 26 2021** \
 Please address questions/comments to Melinda Conners: connersm@gmail.com
 
+## Functions/Toolboxes:
+For the following scripts to work, need to load functions and toolboxes into Matlab path. Files starting with 'ft' should be included in a Functions_Toolboxes folder.
+
 ## Scripts: 
 
 #### 's1_import_AGM.m' (MATLAB): to import and pre-process sensor data from Technosmart AGM devices
