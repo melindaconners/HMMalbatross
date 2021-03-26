@@ -1,7 +1,6 @@
 # HMMalbatross
 This repository stores the code and an example dataset used in Conners et al 2021 Movement Ecology: "Hidden Markov models identify major movement modes in accelerometer and magnetometer data from four albatross species."
 
-**This README and all files will be finalized and uploaded by Feb. 26 2021** \
 Please address questions/comments to Melinda Conners: connersm@gmail.com
 
 ## Functions/Toolboxes:
