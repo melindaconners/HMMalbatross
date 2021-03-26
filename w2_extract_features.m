@@ -125,7 +125,7 @@ tic()
                     % ---------------------------------------------------------------------  
                     tic()
                  
-                   for j = 1:length(winvec)-1
+                   parfor j = 1:length(winvec)-1
                       ixs = winvec(j):winvec(j+1)-1;
 
                       if length(find(all(A(ixs,:) == 0,2))) > 2*fs 
