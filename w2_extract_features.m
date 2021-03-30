@@ -152,11 +152,13 @@ tic()
                         plot(freq_scale,PSD(1:length(freq_scale)))
 
                         % Find most dominant frequency in signal
-                        [max_amp, max_freq] = max(PSD(1:length(freq_scale))); %maximum power spectral density
-                        most_dominant_frequency = freq_scale(max_freq);
-
-                        % Find multiple dominant frequencies identified in FFT
-
+%                         [max_amp, max_freq] = max(PSD(1:length(freq_scale))); %maximum power spectral density
+%                         most_dominant_frequency = freq_scale(max_freq);
+                        
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                        % Find all dominant frequencies in signal
+                        % Instead of using PSD to just isolate the most dominant frequency (L155-156), I want to find multiple dominant frequencies identified in FFT (since the flapping frequency will often get superceded by soaring frequency even if bird is flapping 1/3-1/5 of time in the 15-30s window)
+        
                          % smooth curve 
                             method = 'gaussian';
                             window = 30;
