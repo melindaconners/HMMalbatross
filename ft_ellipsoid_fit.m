@@ -1,5 +1,5 @@
 
-% Function written by Alexei Vyssotski
+% Function provided by Alexei Vyssotski
 
 
 function [ center, radii, evecs, v, chi2, evals, stdsum ] = ellipsoid_fit( X, equals )
