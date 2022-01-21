@@ -4,7 +4,7 @@ This repository stores the code and an example dataset used in Conners et al 202
 Please address questions/comments to Melinda Conners: connersm@gmail.com
 
 ## Example dataset:
-albatross-example-featurized30s-dataset.csv: This truncated dataset consists of featurized data from 4 individuals (2 black-browed albatross and 2 grey-headed albatross). Features include 'hf', 'p5',  and 'sh' (descriptions of their derivation in manuscript). Features were derived from 25 Hz data but were summarized to a 30-s timescale. Two additional columns for 'species' and 'ID' are also included. 
+*albatross-example-featurized30s-dataset.csv: This truncated dataset consists of featurized data from 4 individuals (2 black-browed albatross and 2 grey-headed albatross). Features include 'hf', 'p5',  and 'sh' (descriptions of their derivation in manuscript). Features were derived from 25 Hz data but were summarized to a 30-s timescale. Two additional columns for 'species' and 'ID' are also included. 
 
 ## Functions/Toolboxes:
 For the following scripts to work, need to load functions and toolboxes into Matlab path. Files starting with 'ft' should be included in a Functions_Toolboxes folder.
